@@ -7,6 +7,7 @@
     margin: 0;
     
 }
+
 .container{
     background-color: var(--c1);
     display: flex;
@@ -14,6 +15,15 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+}
+@media(max-width:991px){
+    .container .app{
+        width: 95%;
+        padding: 10px;
+    }
+    .container .app .options{
+        padding: 5px;
+    }
 }
 .app{
     width: 50%;
