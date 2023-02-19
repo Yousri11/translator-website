@@ -28,17 +28,10 @@ for(let i=0;i<alls.length;i++){
         alls[i].insertAdjacentHTML("beforeend",op); 
      }
 }
-function change(s1,s){
-    s1.remove(s1.selectedIndex)
-    let a=document.querySelectorAll(`#${s}`)
-    a[0].setAttribute("selected",true)
-}
+
 ex.addEventListener('click',()=>{
-    /*let a=s1.value;
-    let b=s2.value;
-    change(s1,b);
-    change(s2,a);
-    console.log(s1)
-    console.log(s2)
-    return*/
+    let c=s1.value
+    s1.value=s2.value
+    s2.value=c;
+    return ''
 })
