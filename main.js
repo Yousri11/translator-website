@@ -5,6 +5,7 @@ const s2=document.querySelector(".s2")
 const alls=document.querySelectorAll("select")
 const t1=document.querySelector('#t1')
 const t2=document.querySelector('#t2')
+const tbtn=document.querySelector('.transitionbtn')
 for(let i=0;i<alls.length;i++){
     for(let j in countries){
         var s="";
@@ -38,4 +39,13 @@ ex.addEventListener('click',()=>{
     t1.value=t2.value
     t2.value=t
     return ''
+})
+
+
+tbtn.addEventListener('click',()=>{
+    if(t1.value=="")return ;
+    let apiUrl = `https://api.mymemory.translated.net/get?q=${t1.value}&langpair=${s1.value}|${s2.value}`;
+    fetch(apiUrl).then(res=>res.json()).then(res=>{
+        t2.innerHTML=res.responseData.translatedText
+    })
 })

@@ -48,6 +48,9 @@ textarea{
     grid-template-rows: 80% 20%;
     overflow: hidden;
 }
+.transitionbtn{
+    cursor: pointer;
+}
 .placeholder textarea{
     background-color: transparent;
     padding:20px;
